@@ -1,0 +1,112 @@
+export const questionSections = [
+  {
+    title: "A1. Deficits in social‐emotional reciprocity",
+    questions: [
+      "How often does your child walk up to others in an unusual way, such as standing too close or touching them unexpectedly?",
+      "Does your child rarely or never talk to you just to be friendly, unless they need something?",
+      "How often does your child not respond when you call his or her name? (For example, does he or she continue what they are doing without looking up, talking, or babbling?)",
+      "How often does your child struggle to understand instructions unless you provide additional cues, like pointing or gestures? (For example, if you say “put the book on the chair” or “bring me the blanket” without pointing, do they have difficulty following?)",
+      "Does he or she find it difficult to keep a conversation going with peers?",
+      "How often does your child rarely or never bring you toys or books to get your attention or involve you in play?",
+      "If something new happens, how often does your child not look at your face to see how you feel about it?",
+      "How often does your child rarely or never smile in response to social interactions, even when happy or excited (e.g., playing with others, receiving a gift)?",
+      "How often does your child seem not to be listening so much so that some people suspect he/she has hearing problems?",
+      "How often does your child avoid imitating simple games (like peek-a-boo, pat-a-cake) and show little interest in repeating them?",
+    ],
+  },
+  {
+    title:
+      "A2. Deficits in nonverbal communicative behaviors used for social interaction",
+    questions: [
+      "How often does your child avoid making eye contact when requesting something or during conversation?",
+      "Does your child frequently turn away from a speaker instead of facing them while listening?",
+      "Does your child ever spontaneously point at things around him or her just to show you things (not because she/he wants them)?",
+      "Does your child rarely or never nod his or her head to indicate yes?",
+      "How often does your child not notice or respond to others' facial expressions (e.g., happiness, sadness)?",
+      "How often does your child pause in unusual places when speaking, making their speech sound unnatural?",
+      "Does your child rarely or never try to comfort you if you are sad or hurt?",
+      "Does he or she ever use socially inappropriate questions or statements? For example, does he or she regularly ask personal questions or make personal comments at awkward times?",
+      "Does he or she ever use words that he or she seems to have invented or made up himself or herself? For example, use metaphorical ways of saying things (e.g. saying hot rain for steam)",
+      "Does your child show limited or unusual facial expressions in different situations?",
+    ],
+  },
+  {
+    title: "A3. Deficits in developing and maintaining relationships",
+    questions: [
+      "How often does your child avoid starting or joining social interactions, such as offering a toy or playing in a group?",
+      "When your child is playing or talking, does he or she continue even when others show they are not interested (e.g., not paying attention, turning away)?",
+      "Does your child sometimes laugh, smile, or show inappropriate emotions in situations where it doesn't fit the context?",
+      "Does your child rarely or never engage in pretend or make-believe play? (For example, pretend to drink from an empty cup, pretend to talk on a phone, or pretend to feed a doll or stuffed animal.)",
+      "Does your child show little or no interest in other children? (For example, does your child rarely watch, smile at, or approach other children?)",
+      "Does your child have difficulty forming close friendships or show no preference for specific friends?",
+      "Does your child struggle to play cooperatively in group games, such as hide-and-seek or ball games, and prefer solitary activities instead?",
+      "When someone new enters the room, how often does your child often ignore them and not look at them?",
+      "Does your child only interact with children who are significantly older or younger, rather than peers of the same age?",
+      "How often does your child seem to be in their own world, avoiding interaction with others?",
+    ],
+  },
+  {
+    title:
+      "B1. Stereotyped or repetitive speech, motor movements, or use of objects",
+    questions: [
+      "How often does your child use their name instead of 'I' or mix up pronouns (e.g., saying 'you want' instead of 'I want')?",
+      "How often does your child repeat phrases they've heard from TV or others (e.g., repeating entire sentences or catchphrases)?",
+      "How often does your child make repetitive sounds, like gibberish or self-made words, while playing?",
+      "Does your child often speak in an overly formal or pedantic manner, similar to an adult or a 'little professor'?",
+      "How often does your child use memorized or scripted phrases in conversation rather than generating new sentences?",
+      "How often does your child make repetitive movements, like clapping their hands, flicking their fingers, or flapping their arms?",
+      "How often does your child exhibit intense body tensing or rigidity?",
+      "How often does your child grind their teeth repetitively?",
+      "How often does your child engage in repetitive, nonfunctional play with objects, such as waving sticks or repeatedly dropping items?",
+      "Does your child frequently switch lights on and off in a repetitive manner?",
+    ],
+  },
+  {
+    title:
+      "B2. Excessive adherence to routines, ritualized patterns of verbal or nonverbal behavior, or excessive resistance to change",
+    questions: [
+      "How often does your child insist on following strict routines or doing things in a set order (e.g., bedtime, dressing, or daily activities)?",
+      "How often does your child get upset when rules are not followed or insist on correcting others?",
+      "Does your child engage in routines that appear unusual, such as needing to complete specific actions in a precise order before moving on to another activity?",
+      "How often does your child become very focused on following specific rituals such as always walking in a certain pattern, doing certain actions before eating or using the toilet?",
+      "How often does your child ask the same question repeatedly, without changing how they ask it?",
+      "How often does your child insist on saying certain words or phrases in a specific way, or require others to respond in a particular manner?",
+      "How often does your child refuse to try new foods or insist on eating the same foods in a specific way?",
+      "Does your child find it difficult to transition between different activities and prefer to stick to routines?",
+      "Does your child struggle to 'read between the lines' and understand implied meanings when someone is talking to him or her?",
+      "How often does your child become the last to understand the point of a joke?",
+    ],
+  },
+  {
+    title:
+      "B3. Highly restricted, fixated interests that are abnormal in intensity or focus",
+    questions: [
+      "Does your children ever have any special interests that are unusual in their intensity but otherwise appropriate for her/his age and peer group (e.g. trains or dinosaurs)?",
+      "How often does your child focus intensely on one toy or activity, ignoring others?",
+      "How often does your child show little to no interest in new hobbies or activities?",
+      "How does your child often focus on the same few things, like certain numbers, letters, colors, historical events, or other specific topics?",
+      "How often does your child insist on doing things perfectly, and feel upset and angry if things are not just right?",
+      "Does your child ever have any interests that preoccupy him or her and might seem odd to other people (e.g. traffic lights, drainpipes, timetables)?",
+      "Does your child ever seem to be more interested in parts of a toy or an object (e.g. spinning the wheels of a car), rather than using the objects as it was intended?",
+      "How often does your child prefer non-toy objects (e.g., DVD cases, strings) over traditional toys?",
+      "How often does your child holding a specific thing for a long time, and it's not common attachment objects such as blankets, stuffed animals?",
+      "How often does your child have unusual fears, like being afraid of specific things such as people wearing earrings or other objects that others might not find scary?",
+    ],
+  },
+  {
+    title:
+      "B4. Hyper or hypo reactivity to sensory input or unusual interest in sensory aspects of environment",
+    questions: [
+      "How often does your child not respond to painful stimuli, such as falling, cutting, or receiving an injection?",
+      "How often does your child engage in self-injurious behaviors, such as head banging, biting their hands, or poking their eyes?",
+      "How often does your child dislike touch (e.g., dressing, bathing) or seek excessive physical contact?",
+      "How often is your child sensitive to sensory changes, like certain clothes, foods, or messy activities?",
+      "How often does your child show a strong interest in textures (e.g., rubbing surfaces, twirling hair, licking objects)?",
+      "How often does your child squint, close their eyes, or frown in normal lighting?",
+      "Does your child have difficulty distinguishing the characteristics of objects, such as their size, color, or position?",
+      "How often is your child overly sensitive to loud noises, or seem to ignore them?",
+      "How often does your child use unusual sensory to explore objects, such as smell, touch, or taste things around them?",
+      "Does your child have difficulty estimating distances, such as reaching for objects that are too far away to grasp?",
+    ],
+  },
+];
