@@ -15,7 +15,7 @@ const LevelQuestion = ({
   const handleLevelChange = (level: string) => {
     setLevelAnswer(level);
     onLevelSelect(level, sectionIndex);
-    console.log(level);
+    console.log(levelAnswer);
   };
 
   return (

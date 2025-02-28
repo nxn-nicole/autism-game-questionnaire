@@ -54,10 +54,6 @@ const DetailedQuestions = ({
       </button>
       {openDropDown &&
         questionSections[sectionIndex].questions.map((question, index) => {
-          let questionOffset = questionSections
-            .slice(0, sectionIndex)
-            .reduce((sum, sec) => sum + sec.questions.length, 0);
-          const globalIndex = questionOffset + index;
           return (
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div className="question">
