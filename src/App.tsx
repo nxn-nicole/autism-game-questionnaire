@@ -2,21 +2,28 @@ import { useState } from "react";
 import "./index.css";
 import { questionSections } from "./questionSections";
 import "rc-slider/assets/index.css";
-import CustomSlider from "./assets/components/custom-slider";
+import LevelQuestion from "./assets/components/level-question";
+import DetailedQuestions from "./assets/components/detailed-questions";
 
 function App() {
-  const [responses, setResponses] = useState(Array(70).fill(0));
+  const [levels, setLevels] = useState<string[]>(Array(7).fill("Level *"));
+  const questionTitle = ["A1", "A2", "A3", "B1", "B2", "B3", "B4"];
+  const [submitState, setSubmitState] = useState<boolean>(false);
 
-  const handleChange = (index: number, value: number) => {
-    const newResponses = [...responses];
-    newResponses[index] = value;
-    setResponses(newResponses);
+  const handleLevel = (level: string, index: number) => {
+    setLevels((prev) => {
+      const newLevels = [...prev];
+      newLevels[index] = level;
+      return newLevels;
+    });
   };
 
   const handleSubmit = () => {
-    const totalSum = responses.reduce((acc, num) => acc + num, 0);
-    console.log("Total Sum:", totalSum);
-    setResponses((prev) => [...prev.map(() => 0)]);
+    levels.map((answer, index) => {
+      console.log(`${questionTitle[index]}: ${answer}`);
+    });
+    setLevels((prev) => [...prev.map(() => "Level *")]);
+    setSubmitState(true);
   };
 
   return (
@@ -34,39 +41,22 @@ function App() {
       </p>
       <form>
         {questionSections.map((section, sectionIndex) => {
-          let questionOffset = questionSections
-            .slice(0, sectionIndex)
-            .reduce((sum, sec) => sum + sec.questions.length, 0);
           return (
             <div key={sectionIndex} className="section">
               <h2 className="second-title">{section.title}</h2>
-              {section.questions.map((question, index) => {
-                const globalIndex = questionOffset + index;
-                return (
-                  <div style={{ display: "flex", flexDirection: "column" }}>
-                    <div className="question">
-                      <label>
-                        {index + 1}. {question}
-                      </label>
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        fontWeight: "bold",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <span style={{ paddingRight: "10px" }}>Never</span>
-                      <CustomSlider
-                        point={responses[globalIndex]}
-                        index={globalIndex}
-                        onChange={handleChange}
-                      ></CustomSlider>
-                      <span style={{ paddingLeft: "10px" }}>Always</span>
-                    </div>
-                  </div>
-                );
-              })}
+              <LevelQuestion
+                onLevelSelect={(level, sectionIndex) =>
+                  handleLevel(level, sectionIndex)
+                }
+                sectionIndex={sectionIndex}
+              ></LevelQuestion>
+              <DetailedQuestions
+                submitState={submitState}
+                sectionIndex={sectionIndex}
+                onSlider={(level, sectionIndex) =>
+                  handleLevel(level, sectionIndex)
+                }
+              ></DetailedQuestions>
             </div>
           );
         })}

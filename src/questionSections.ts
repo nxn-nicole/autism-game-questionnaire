@@ -1,6 +1,6 @@
 export const questionSections = [
   {
-    title: "A1. Deficits in social‐emotional reciprocity",
+    title: "A1. Deficits in social-emotional reciprocity",
     questions: [
       "How often does your child walk up to others in an unusual way, such as standing too close or touching them unexpectedly?",
       "Does your child rarely or never talk to you just to be friendly, unless they need something?",
