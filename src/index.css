@@ -96,5 +96,11 @@ label {
   margin: 10px;
   font-size: 18px;
   padding: 4px 20px 4px 20px;
-  border: none;
+  border-color: #2f4ed9;
+  border-width: 2px;
+}
+
+.level-button.selected {
+  color: #2f4ed9;
+  background-color: white;
 }

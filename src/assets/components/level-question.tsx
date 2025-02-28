@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LevelButton from "./level-button";
 
 const levels = ["Level 0", "Level 1", "Level 2", "Level 3"];
 
 const LevelQuestion = ({
+  submitState,
   sectionIndex,
   onLevelSelect,
 }: {
+  submitState: boolean;
   sectionIndex: number;
   onLevelSelect: (level: string, sectionIndex: number) => void;
 }) => {
@@ -15,8 +17,11 @@ const LevelQuestion = ({
   const handleLevelChange = (level: string) => {
     setLevelAnswer(level);
     onLevelSelect(level, sectionIndex);
-    console.log(levelAnswer);
   };
+
+  useEffect(() => {
+    setLevelAnswer(null);
+  }, [submitState]);
 
   return (
     <>
@@ -33,7 +38,11 @@ const LevelQuestion = ({
         }}
       >
         {levels.map((level) => (
-          <LevelButton level={level} onClick={handleLevelChange} />
+          <LevelButton
+            level={level}
+            onClick={handleLevelChange}
+            isSelected={levelAnswer === level}
+          />
         ))}
       </div>
     </>

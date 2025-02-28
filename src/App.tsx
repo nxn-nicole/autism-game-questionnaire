@@ -45,6 +45,7 @@ function App() {
             <div key={sectionIndex} className="section">
               <h2 className="second-title">{section.title}</h2>
               <LevelQuestion
+                submitState={submitState}
                 onLevelSelect={(level, sectionIndex) =>
                   handleLevel(level, sectionIndex)
                 }
