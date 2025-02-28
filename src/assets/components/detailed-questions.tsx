@@ -43,7 +43,7 @@ const DetailedQuestions = ({
   }, [submitState]);
 
   return (
-    <>
+    <div className="detailed-questions">
       <button type="button" className="dropdown" onClick={handleDropDown}>
         <img
           src={dropdownImage}
@@ -79,7 +79,7 @@ const DetailedQuestions = ({
             </div>
           );
         })}
-    </>
+    </div>
   );
 };
 

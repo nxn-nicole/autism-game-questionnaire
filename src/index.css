@@ -104,3 +104,9 @@ label {
   color: #2f4ed9;
   background-color: white;
 }
+
+.detailed-questions {
+  background-color: #eeebeb;
+  border-radius: 15px;
+  padding: 10px;
+}
