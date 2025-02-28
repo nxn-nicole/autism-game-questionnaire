@@ -34,7 +34,6 @@ const DetailedQuestions = ({
     }
 
     onSlider(level, sectionIndex);
-    console.log(level);
   };
 
   useEffect(() => {
