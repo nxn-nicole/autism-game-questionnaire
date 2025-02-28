@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const LevelButton = ({
   level,
   onClick,
@@ -7,6 +9,8 @@ const LevelButton = ({
   onClick: (level: string) => void;
   isSelected: boolean;
 }) => {
+  useEffect(() => {}, [isSelected]);
+
   return (
     <button
       className={`level-button ${isSelected ? "selected" : ""}`}
