@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./index.css";
 import { questionSections } from "./questionSections";
 import "rc-slider/assets/index.css";
