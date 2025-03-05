@@ -111,3 +111,54 @@ label {
   border-radius: 15px;
   padding: 10px;
 }
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #2f4ed9;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #eeebeb;
+  margin: 2px;
+  padding: 4px 8px 4px 8px;
+  font-weight: bold;
+}
+
+.result-dialog {
+  border-radius: 3px;
+  width: 500px;
+}
+
+.level-result {
+  background-color: grey;
+  border-radius: 3px;
+  color: white;
+  margin: 3px;
+  padding: 5px;
+}
+
+.level-table {
+  width: 300px;
+  border-collapse: collapse;
+  margin: auto;
+  display: block;
+}
+
+.level-table th,
+.level-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.level-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.level-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

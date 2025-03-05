@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./index.css";
 import { questionSections } from "./questionSections";
 import "rc-slider/assets/index.css";
 import LevelQuestion from "./assets/components/level-question";
 import DetailedQuestions from "./assets/components/detailed-questions";
+import ResultPopup from "./assets/components/result-popup";
 
 function App() {
   const [levels, setLevels] = useState<string[]>(Array(7).fill("Level *"));
-  const questionTitle = ["A1", "A2", "A3", "B1", "B2", "B3", "B4"];
+  const [finalLevels, setFinalLevels] = useState<string[]>([]);
   const [submitState, setSubmitState] = useState<boolean>(false);
+  const dialogRef = useRef<{ open: () => void }>(null);
+
+  const openDialog = () => {
+    dialogRef.current?.open();
+  };
 
   const handleLevel = (level: string, index: number) => {
     setLevels((prev) => {
@@ -16,12 +22,12 @@ function App() {
       newLevels[index] = level;
       return newLevels;
     });
+    setSubmitState(false);
   };
 
   const handleSubmit = () => {
-    levels.map((answer, index) => {
-      console.log(`${questionTitle[index]}: ${answer}`);
-    });
+    setFinalLevels([...levels]);
+    openDialog();
     setLevels((prev) => [...prev.map(() => "Level *")]);
     setSubmitState(true);
   };
@@ -77,6 +83,7 @@ function App() {
           Submit
         </button>
       </div>
+      <ResultPopup ref={dialogRef} levelResult={finalLevels}></ResultPopup>
     </div>
   );
 }
